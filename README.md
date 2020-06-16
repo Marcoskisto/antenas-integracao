@@ -17,7 +17,7 @@
 
 ## Tecnologias Aplicadas
 
-[Tabela de Tecnologias](https://github.com/Marcoskisto/antenas-integracao/blob/master/InfraEstrutura/Tabela%20de%20Tecnologias.png)
+![Tabela de Tecnologias](https://github.com/Marcoskisto/antenas-integracao/blob/master/InfraEstrutura/Tabela%20de%20Tecnologias.png)
 
 ## Detalhes sobre as Tecnologias aplicadas
 
