@@ -110,7 +110,11 @@ Esse container se comunica com o Prometheus( Porta 9090), um serviço de monitor
 
 ## 4. Continuous Integration
 Para o continuous Integration foi escolhido o Jenkins que após um commit no github, é feito um deploy de um arquivo .jar em um volume compartilhado com o container webserver que é responsável por rodar a aplicação.
-
+##### 4.1 Configuração Inicial do Jenkins
+Entre as opções do Jenkins, ir até a parte que trata de plugins e instalar os seguintes:
+   * Pipeline;
+   * Github plugin;
+   * Freestyle project.
 ##### 4.1. Comunicação do Github para o Jenkins
 A comunicação entre o Github e o Jenkins ocorre em função de uma API. 
 Depois do item anterior, é necessário configurar o Github para enviar uma requisição para o Jenkins em nosso servidor. Isso é feito seguindo os seguintes passos:
@@ -124,10 +128,17 @@ Depois do item anterior, é necessário configurar o Github para enviar uma requ
 
 ##### 4.2. Configurar o Jenkins com a API do github
 1. Abrir o Jenkins;
-1. Clicar no nome do Projeto;
-1. Clicar em Configurar;
+1. Clicar em **Novo job**
+1. Ecrever um nome do projeto, marcar a opçao **Pipeline** e clicar em OK;
+1. Clicar no nome do Projeto depois em **Configurar**;
 1. Na Aba **Trigger de builds**, marcar a opção "**GitHub hook trigger for GITScm polling**";
 1. Na aba **Gerenciamento de código fonte**, em credentials adicionar a credencial do github;
+1. Em **Pipeline**/**Definition** escolher **Pipeline script from SCM**;
+1. Em **SCM** escolher **GIT**;
+1. Inserir o endereço do repositório;
+1. Clicar em **Pypeline syntax**;
+
+
 
 #### 4.3. Configurar o pipeline de teste e integração no jenkins
 
