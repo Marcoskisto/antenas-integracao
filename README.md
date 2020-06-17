@@ -115,6 +115,11 @@ Entre as opções do Jenkins, ir até a parte que trata de plugins e instalar os
    * Pipeline;
    * Github plugin;
    * Freestyle project.
+   
+Configurar o Jenkins:
+   1. Clicar em **Gerenciar Jenkins** > **Global tool configuration**;
+   1. Clicar em **Adicionar Maven**, Digitar o nome **maven** no próximo campo , escolher a versão e **Salvar**;
+
 ##### 4.1. Comunicação do Github para o Jenkins
 A comunicação entre o Github e o Jenkins ocorre em função de uma API. 
 Depois do item anterior, é necessário configurar o Github para enviar uma requisição para o Jenkins em nosso servidor. Isso é feito seguindo os seguintes passos:
@@ -136,9 +141,6 @@ Depois do item anterior, é necessário configurar o Github para enviar uma requ
 1. Em **Pipeline**/**Definition** escolher **Pipeline script from SCM**;
 1. Em **SCM** escolher **GIT**;
 1. Inserir o endereço do repositório;
-1. Clicar em **Pypeline syntax**;
-
-
 
 #### 4.3. Configurar o pipeline de teste e integração no jenkins
 
